@@ -1,0 +1,87 @@
+/* Estilos generales para el contenedor del formulario */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Cambia el ancho para hacerlo más grande */
+    max-width: 800px; /* Define un ancho máximo para que no se expanda demasiado */
+    margin: 3rem auto; /* Aumenta el margen para mayor espacio en pantallas más grandes */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    overflow-x: hidden; /* Oculta el desbordamiento horizontal */
+    overflow-y: auto; /* Permite el desbordamiento vertical si es necesario */
+    padding-bottom: 200px;
+}
+
+/* Título del formulario */
+.form-container h1 {
+    font-size: 2.5rem; /* Aumenta el tamaño del título para hacerlo más visible */
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+/* Estilos para los campos del formulario */
+.form-container form {
+    width: 100%;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+}
+
+.input-field {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem; /* Aumenta el tamaño de la fuente para mejor legibilidad */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #4caf50;
+}
+
+/* Botón de envío */
+.submit-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+/* Mensajes de error y éxito */
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 600px) {
+    .form-container {
+        width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho disponible */
+        padding: 1rem;
+    }
+}

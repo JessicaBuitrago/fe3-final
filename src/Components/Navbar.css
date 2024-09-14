@@ -1,0 +1,129 @@
+/* Navbar.css */
+:root {
+  --color-bg-light: #ffffff;
+  --color-bg-dark: #333333;
+  --color-text-light: #333333;
+  --color-text-dark: #ffffff;
+  --color-primary: #f0a500;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--color-bg-light);
+  color: var(--color-text-light);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-dark);
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-bg-dark);
+  padding: 1rem;
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+  transition: background-color 0.3s;
+}
+
+body.dark-mode .navbar {
+  background-color: var(--color-bg-light);
+}
+
+.navbar-logo h1 {
+  color: var(--color-text-dark);
+}
+
+body.dark-mode .navbar-logo h1 {
+  color: var(--color-text-light);
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  margin-left: 2rem;
+}
+
+.navbar-links a {
+  color: var(--color-text-dark);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+body.dark-mode .navbar-links a {
+  color: var(--color-text-light);
+}
+
+.navbar-links a:hover {
+  color: var(--color-primary);
+}
+
+.navbar-login .btn-login {
+  background-color: var(--color-primary);
+  color: var(--color-text-dark);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.navbar-login .btn-login:hover {
+  background-color: var(--color-text-dark);
+  color: var(--color-bg-light);
+}
+
+.navbar-login .btn-theme-toggle {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar-login .btn-theme-toggle:hover {
+  color: var(--color-text-dark);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+
+  .navbar-links li {
+    margin: 0.5rem 0;
+  }
+
+  .navbar-login {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+
+  .navbar-login .btn-theme-toggle {
+    margin-left: 0;
+  }
+}

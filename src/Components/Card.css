@@ -1,0 +1,24 @@
+.card-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  
+}
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s; /* Agrega transiciones suaves */
+  
+}
+
+.card:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+  background-color: #f9f9f9; /* Cambia el color de fondo al pasar el mouse */
+  
+}

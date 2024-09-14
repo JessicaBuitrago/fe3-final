@@ -1,0 +1,43 @@
+/* src/pages/Detail.css */
+.detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+  }
+  
+  .detail-container {
+    width: 100%;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  .detail h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .detail p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #555;
+  }
+  
+  .detail a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .detail a:hover {
+    text-decoration: underline;
+  }
+  

@@ -1,17 +1,42 @@
-import React from 'react'
-import Card from '../Components/Card'
-
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
+import React, { useState, useEffect } from 'react';
+import Card from '../Components/Card';
+import Favs from './Favs'; // Asegúrate de importar el componente Favs
+import './Home.css'; // Importa el CSS para estilos adicionales si es necesario
 
 const Home = () => {
-  return (
-    <main className="" >
-      <h1>Home</h1>
-      <div className='card-grid'>
-        {/* Aqui deberias renderizar las cards */}
-      </div>
-    </main>
-  )
-}
+  const [cards, setCards] = useState([]);
 
-export default Home
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/users');
+        const data = await response.json();
+        setCards(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  return (
+    <main className="home">
+      <div className="card-grid">
+        {cards.map((card) => (
+          <Card 
+            key={card.id} 
+            name={card.name} 
+            username={card.username} 
+            id={card.id} 
+          />
+        ))}
+      </div>
+
+      {/* Renderiza el componente Favs y pasa los datos de cards */}
+      <Favs users={cards} />
+    </main>
+  );
+};
+
+export default Home;
